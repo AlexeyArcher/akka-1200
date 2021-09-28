@@ -2,7 +2,7 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.model.{ContentTypes, HttpEntity}
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
-
+import api.usersApi
 object Server {
   val content =
     """
@@ -13,7 +13,11 @@ object Server {
       | </body>
       |</html>
     """
-  val route = get {
+  val route =
+    pathPrefix("v1") {
+      usersApi ~
+
+    } ~ get {
     complete(
       HttpEntity(
         ContentTypes.`text/html(UTF-8)`,
