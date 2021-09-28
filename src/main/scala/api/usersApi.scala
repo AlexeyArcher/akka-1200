@@ -18,9 +18,7 @@ trait usersApi{
       (path("users") & post) { entity(as[String]) { str =>
         complete (s"should print ${str}")
       }
-      }~
-      (path("users"/IntNumber) & put) { entity(as[String]) { str =>
-        complete (s"should update ${str}")
-      }
+
+
       }
 }
