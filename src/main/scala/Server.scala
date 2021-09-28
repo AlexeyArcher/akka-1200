@@ -25,11 +25,9 @@ object Server {
 
     implicit val system = ActorSystem("Server")
 
-    // set hostname/port combination
     val host = "0.0.0.0"
     val port: Int = sys.env.getOrElse("PORT", "8080").toInt
 
-    // this actually starts the server
     Http().bindAndHandle(route, host, port)
   }
 }
