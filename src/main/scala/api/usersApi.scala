@@ -3,7 +3,6 @@ package api
 import scala.concurrent.ExecutionContext.Implicits.global
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
 import mappings.JsonMappings
-import models.User
 import akka.http.scaladsl.server.Directives._
 import spray.json._
 
