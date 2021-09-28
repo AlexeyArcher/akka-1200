@@ -5,7 +5,7 @@ scalaVersion := "2.13.5"
 mainClass in Compile := Some("Server")
 val AkkaVersion = "2.6.8"
 val AkkaHttpVersion = "10.2.6"
-val AkkaSprayVersion = "10.0.15"
+val AkkaSprayVersion = "10.2.6"
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
   "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
