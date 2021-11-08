@@ -6,16 +6,16 @@ import mappings.JsonMappings
 import akka.http.scaladsl.server.Directives._
 import spray.json._
 
-trait usersApi{
-  val userApi = {
+trait userApiRu{
+  val usersApiRu = {
     (path("users") & get ) {
-      complete ("beauty names")
+      complete ("Красивые имена")
     }~
       (path("users"/IntNumber) & get) { id =>
-        complete (s"beauty names, ${id}")
+        complete (s"Красивые имена, ${id}")
       }~
       (path("users") & post) { entity(as[String]) { str =>
-        complete (s"should print ${str}")
+        complete (s"Должно напечатать ${str}")
       }
 
 
