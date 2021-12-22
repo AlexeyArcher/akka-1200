@@ -25,14 +25,13 @@ libraryDependencies ++= {
     "com.typesafe.slick" %% "slick" % slickVersion,
 
     // Postgres driver
-    "org.postgresql" % "postgresql" % "42.1.4",
+    "org.postgresql" % "postgresql" % "42.2.0",
 
     // Migration for SQL databases
     "org.flywaydb" % "flyway-core" % "4.2.0",
 
     // Connection pool for database
     "com.zaxxer" % "HikariCP" % "2.7.0",
-
     // Encoding decoding sugar, used in passwords hashing
     "com.github.fdietze.hasher" %% "hasher" % "75be8ed",
 
